@@ -1,0 +1,23 @@
+<!--DOCTYPE html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template</title>
+</head>
+<body>
+
+<h1>{{ title }}Template is working...</h1>
+
+{%  for obj in object_list %} <hr>
+{% url "posts:detail" id=obj.id %}
+<a href='{{ obj.get_absolute_url }} '>{{ obj.title}} </a></br>
+<p> ID: {{obj.id}} </p> 
+{{ obj.content}} </br>
+{{ obj.timestamp}} </br>
+{{ obj.updated}} </br>
+
+{% endfor %} </br>
+
+</body>
+</html>
